@@ -1,0 +1,92 @@
+@import "styles.css";
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--off-white);
+  padding: 3rem 0;
+}
+
+.on-menu {
+  background-color: var(--off-white);
+}
+
+.list-menu {
+  display: flex;
+  gap: 3rem;
+  list-style-type: none;
+  background-color: var(--off-white);
+}
+
+.list-menu a {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: var(--dark-grayish-blue);
+  text-decoration: none;
+}
+
+.list-menu a:hover {
+  color: var(--soft-red);
+}
+
+#open-menu,
+#close-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .logo {
+    width: 5.5rem;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: hsla(240, 100%, 5%, 0.35);
+  }
+
+  .on-menu {
+    min-width: 26rem;
+    padding: 3rem;
+  }
+
+  .list-menu {
+    flex-direction: column;
+    margin-top: 9rem;
+  }
+
+  .list-menu a {
+    display: block;
+    color: var(--very-dark-blue);
+  }
+
+  #close-menu {
+    display: initial;
+    background-color: var(--off-white);
+    border: none;
+    position: absolute;
+    right: 2rem;
+    cursor: pointer;
+  }
+
+  #open-menu {
+    display: initial;
+    background-color: var(--off-white);
+    border: none;
+    cursor: pointer;
+  }
+
+  .show {
+    display: flex;
+    justify-content: end;
+  }
+
+  .hide {
+    display: none;
+  }
+}
